@@ -17,9 +17,4 @@ public class SignupserviceApplication {
 	public Queue queue(){
 		return new Queue("status");
 	}
-
-	@Bean
-	public CommandLineRunner runner(){
-		return new RabbitAmqpRunner();
-	}
 }
