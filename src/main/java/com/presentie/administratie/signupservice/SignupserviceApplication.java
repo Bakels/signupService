@@ -19,6 +19,8 @@ public class SignupserviceApplication {
 		return new Queue("status");
 	}
 
+
+
 	@Bean
 	public ObjectMapper mapper(){
 		return new ObjectMapper();
