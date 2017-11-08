@@ -1,5 +1,6 @@
 package com.presentie.administratie.signupservice;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.amqp.core.Queue;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -14,7 +15,12 @@ public class SignupserviceApplication {
 	}
 
 	@Bean
-	public Queue queue(){
+	public Queue status(){
 		return new Queue("status");
+	}
+
+	@Bean
+	public ObjectMapper mapper(){
+		return new ObjectMapper();
 	}
 }
